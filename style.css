@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #d2042d; /* Cherry Red */
+    --secondary-color: #ffffff; /* White */
+    --text-color: #000000; /* Black */
+    --background-color: #ffffff; /* White */
+    --accent-color: #8b0000; /* Dark Red */
+    --button-color: #007bff; /* Blue */
+    --button-hover-color: #0056b3; /* Dark Blue */
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(210, 4, 45, 0.9) !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://via.placeholder.com/1920x1080")
+      no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#about {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 50px 0;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--primary-color);
+}
+
+.skill-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.skill-item i {
+    color: var(--primary-color);
+}
+
+.skill-item:hover i {
+    color: var(--secondary-color);
+}
+
+.project-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Styles pour les boutons "View My GitHub" et "Send Message" */
+.btn-github,
+.btn-send {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+    color: var(--secondary-color);
+}
+
+.btn-github:hover,
+.btn-send:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+}
+
+#contact {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    padding: 50px 0;
+}
+
+#contact h2 {
+    color: var(--primary-color);
+}
+
+#contact .form-control {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+#contact .form-control::placeholder {
+    color: #999;
+}
+
+#apis {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 50px 0;
+}
+
+#apis h2 {
+    color: var(--primary-color);
+}
+
+.api-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.api-item:hover {
+    transform: translateY(-10px);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.api-item i {
+    color: var(--primary-color);
+}
+
+.api-item:hover i {
+    color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+}
+
