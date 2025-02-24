@@ -163,7 +163,7 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     border: 1px solid var(--primary-color);
 }
 
@@ -180,6 +180,17 @@ h2 {
 .api-item:hover i {
     color: var(--secondary-color);
 }
+
+/* Styles spécifiques pour l'élément "Discord API" */
+.api-discord:hover {
+    background-color: var(--accent-color); /* Utilisez une couleur différente pour l'overlay */
+    color: var(--secondary-color); /* Assurez-vous que le texte reste visible */
+}
+
+.api-discord:hover i {
+    color: var(--secondary-color); /* Assurez-vous que les icônes restent visibles */
+}
+
 
 footer {
     background-color: var(--text-color);
