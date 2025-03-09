@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link href="style.css" rel="stylesheet"> <!-- Custom CSS -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -25,6 +27,12 @@
                         <a class="nav-link text-light" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-light" href="#frameworks">Frameworks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#apis">APIs</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-light" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
@@ -34,46 +42,40 @@
             </div>
         </div>
     </nav>
-
     <header class="hero">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="display-1 text-danger text-shadow" data-aos="fade-up">The Lost Angel</h1>
+                    <h1 class="display-1 neon-green" data-aos="fade-up">The Lost Angel</h1>
                     <hr class="my-4" data-aos="fade-up" data-aos-delay="100">
-                    <p class="lead text-danger" data-aos="fade-up" data-aos-delay="200">Web Developer | Python Enthusiast | Machine Learning</p>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Web Developer | Python Enthusiast | Machine Learning</p>
                 </div>
             </div>
         </div>
     </header>
-
     <main>
         <section id="about" class="py-5 bg-gray">
             <div class="container">
-              <h2 class="text-center mb-5 text-red" data-aos="fade-up">About Me</h2>
-              <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                  <div class="profile-card text-center">
-                    <img src="thelostangelpicture.jpg" alt="Keven" class="img-fluid rounded-circle border border-red mb-3" style="width: 150px; height: 150px;">
-                    <h3 class="text-dark display-10">Keven</h3>
-                    <p class="text-gray">Web Developer & Python Enthusiast</p>
-                    <div class="social-links">
-                      <a href="#" class="text-red"><i class="fab fa-facebook fa-2x"></i></a>
-                      <a href="#" class="text-red"><i class="fab fa-twitter fa-2x"></i></a>
-                      <a href="#" class="text-red"><i class="fab fa-linkedin fa-2x"></i></a>
-                      <a href="#" class="text-red"><i class="fab fa-github fa-2x"></i></a>
+                <h2 class="text-center mb-5 text-red" data-aos="fade-up">About Me</h2>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3" data-aos="fade-right">
+                        <div class="profile-card">
+                            <img src="thelostangelpicture.jpg" alt="Keven" class="img-fluid rounded-circle mb-3">
+                            <h3 class="display-10">Keven</h3>
+                            <p>Hello! I'm Keven. Since 2016, I have been interested in programming. I have developed a strong interest in everything related to artificial intelligence.</p>
+                            <p>My goal is to design and develop innovative systems, programs, scripts, and modules that drive growth and continuous evolution. I am constantly seeking out new technologies and staying up-to-date with the latest trends to remain at the forefront of innovation.</p>
+                            <p>I began my web development journey in 2016 with HTML and CSS, and later expanded my skills by learning the basics of C# before specializing in Python. With over two years of experience in Python, I have also acquired knowledge in JavaScript and JSON, as well as expertise in using the Discord API, which has allowed me to develop strong programming skills.</p>
+                            <div class="social-links">
+                                <a href="#" class="text-red"><i class="fab fa-facebook fa-2x"></i></a>
+                                <a href="#" class="text-red"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#" class="text-red"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="#" class="text-red"><i class="fab fa-github fa-2x"></i></a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-left">
-                  <p class="text-gray">Hello! I'm Keven. Since 2016, I have been interested in programming. I have developed an strong interest in everything related to artificial intelligence.</p>
-                  <p class="text-gray">My goal is to create systems, programs, scripts, modules, etc., to grow and evolve. I am always eager to learn new technologies and stay up-to-date with the latest trends.</p>
-                  <p class="text-gray">I've been coding in HTML and CSS since 2016, and I've been working with Python for almost 2 years. My skills also include JavaScript and JSON.</p>
-                </div>
-              </div>
             </div>
-          </section>
-
+        </section>
         <section id="skills" class="py-5 bg-light">
             <div class="container">
                 <h2 class="text-center mb-5" data-aos="fade-up">Skills</h2>
@@ -82,41 +84,62 @@
                         <div class="skill-item text-center">
                             <i class="fab fa-html5 fa-3x mb-3"></i>
                             <h4>HTML5</h4>
+                            <p>Experience with HTML5 for creating web pages.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
                         <div class="skill-item text-center">
                             <i class="fab fa-css3-alt fa-3x mb-3"></i>
                             <h4>CSS3</h4>
+                            <p>Experience with CSS3 for styling web pages.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
                         <div class="skill-item text-center">
                             <i class="fab fa-js fa-3x mb-3"></i>
                             <h4>JavaScript</h4>
+                            <p>Experience with JavaScript for adding interactivity to web pages.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
                         <div class="skill-item text-center">
                             <i class="fab fa-python fa-3x mb-3"></i>
                             <h4>Python</h4>
+                            <p>Experience with Python for developing applications and scripts.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
                         <div class="skill-item text-center">
                             <i class="fas fa-database fa-3x mb-3"></i>
                             <h4>JSON</h4>
+                            <p>Experience with JSON for storing and exchanging data.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
                         <div class="skill-item text-center">
                             <i class="fas fa-brain fa-3x mb-3"></i>
                             <h4>Machine Learning</h4>
+                            <p>Experience with Machine Learning for creating intelligent systems.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="frameworks" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Frameworks</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="zoom-in">
+                        <div class="framework-card text-center">
+                            <i class="fab fa-bootstrap fa-3x mb-3"></i>
+                            <h4>Bootstrap</h4>
+                            <p>Experience with Bootstrap for creating responsive websites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="apis" class="py-5 bg-light">
             <div class="container">
                 <h2 class="text-center mb-5" data-aos="fade-up">Known APIs</h2>
@@ -148,19 +171,23 @@
             <div class="container">
                 <h2 class="text-center mb-5" data-aos="fade-up">Contact me</h2>
                 <div class="row justify-content-center">
-                  <!--Email-->
+                    <!--Email-->
                     <div class="col-md-4" data-aos="fade-right">
                         <div class="contact-method text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 text-danger"></i>
-                        <h4 class="text-dark">lasthopeinthisgame@outlook.com</h4>
+                            <i class="fas fa-envelope fa-3x mb-3 text-danger"></i>
+                            <h4 class="text-dark">inovatechstudios@gmail.com</h4>
                         </div>
-                        <!-- discord-->
+                    </div>
+                    <!-- discord-->
+                    <div class="col-md-4" data-aos="fade-right">
                         <div class="contact-method text-center">
-                        <i class="fab fa-discord fa-3x mb-3 text-danger"></i>
-                        <h3 class="text-dark">Discord</h3>
-                        <p>
-                            <a href="https://discord.gg/X4Md4mVaKU" class="text-dark" target="_blank">The Lost Angel</a>
-                        </p>
+                            <i class="fab fa-discord fa-3x mb-3 text-danger"></i>
+                            <h3 class="text-dark">Discord</h3>
+                            <p>
+                                <a href="https://discord.gg/X4Md4mVaKU" class="text-dark" target="_blank">The Lost Angel</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
