@@ -1,310 +1,362 @@
 :root {
-  --primary-color: #00ff00; /* Vert néon */
-  --secondary-color: #000000; /* Noir */
-  --text-color: #ffffff; /* Blanc */
-  --background-color: #000000; /* Noir */
-  --accent-color: #00ff00; /* Vert néon */
-  --button-color: #00ff00; /* Vert néon */
-  --button-hover-color: #00cc00; /* Vert néon foncé */
-  --light-bg-color: #111111; /* Fond sombre au lieu de blanc/gris clair */
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-.navbar {
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: rgba(0, 255, 0, 0.9) !important; /* Vert néon */
-}
-
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://via.placeholder.com/1920x1080")
-    no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--primary-color); /* Assurez-vous que cette ligne n'écrase pas la couleur */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-section {
-  padding: 100px 0;
-}
-
-/* Remplacer les sections bg-light par notre couleur sombre personnalisée */
-.bg-light {
-  background-color: var(--light-bg-color) !important;
-}
-
-/* Remplacer les sections bg-gray par notre couleur sombre personnalisée */
-.bg-gray {
-  background-color: var(--secondary-color) !important;
-}
-
-h2 {
-  color: var(--primary-color);
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-#about {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  padding: 50px 0;
-}
-
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-#about img {
-  max-width: 100%;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.skill-item {
-  background-color: var(--background-color);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border: 1px solid var(--primary-color);
-}
-
-.skill-item:hover {
-  transform: translateY(-10px);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.skill-item i {
-  color: var(--primary-color);
-}
-
-.skill-item:hover i {
-  color: var(--secondary-color);
-}
-
-/* Animation de flottement */
-@keyframes float {
-  0% {
-    transform: translateY(0);
+    --primary-color: #00bcd4; /* Blue-cyan */
+    --secondary-color: #333333; /* Dark gray */
+    --text-color: #ffffff; /* White */
+    --background-color: #666666; /* Medium gray */
+    --accent-color: #00bcd4; /* Blue-cyan */
+    --button-color: #00bcd4; /* Blue-cyan */
+    --button-hover-color: #0097a7; /* Darker blue-cyan */
+    --light-bg-color: #444444; /* Light gray */
+    --dark-bg-color: #222222; /* Darker gray */
   }
-  50% {
-    transform: translateY(-10px);
+  
+  body {
+    font-family: "Arial", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
   }
-  100% {
-    transform: translateY(0);
+  
+  .navbar-dark {
+    background-color: var(--primary-color);
   }
-}
-
-/* Styles pour l'image avec effet de néon vert */
-.profile-card img {
-  border: 5px solid #00ff00; /* Bordure verte */
-  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-}
-
-.project-card {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-card .card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Styles pour les boutons "View My GitHub" et "Send Message" */
-.btn-github,
-.btn-send {
-  background-color: var(--button-color);
-  border-color: var(--button-color);
-  color: var(--secondary-color);
-}
-
-.btn-github:hover,
-.btn-send:hover {
-  background-color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
-}
-
-#apis {
-  background-color: var(--light-bg-color);
-  color: var(--text-color);
-  padding: 50px 0;
-}
-
-#apis h2 {
-  color: var(--primary-color);
-}
-
-.api-item {
-  background-color: var(--background-color);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  border: 1px solid var(--primary-color);
-  height: 100%; /* Assure que les deux cartes ont la même hauteur */
-}
-
-.api-item:hover {
-  transform: translateY(-10px);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.api-item i {
-  color: var(--primary-color);
-}
-
-.api-item:hover i {
-  color: var(--secondary-color);
-}
-
-/* Styles spécifiques pour l'élément "Discord API" */
-.api-discord:hover {
-  background-color: var(--primary-color); /* Utilisez la couleur vert néon pour l'overlay */
-  color: var(--secondary-color); /* Assurez-vous que le texte reste visible */
-}
-
-.api-discord:hover i {
-  color: var(--secondary-color); /* Assurez-vous que les icônes restent visibles */
-}
-
-footer {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  text-align: center;
-  padding: 2rem;
-  border-top: 5px solid var(--primary-color);
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer a {
-  color: var(--primary-color);
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: var(--accent-color);
-}
-
-footer p {
-  margin: 0.5rem 0;
-}
-
-@media (max-width: 768px) {
+  
+  .navbar {
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(0, 188, 212, 0.9) !important; /* Blue-cyan */
+  }
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://via.placeholder.com/1920x1080")
+      no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color); /* Assurez-vous que cette ligne n'écrase pas la couleur */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
-
+  
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
-}
-
-/* Ajoutez cette classe pour la carte du framework */
-.framework-card {
-  background-color: var(--background-color);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border: 1px solid var(--primary-color);
-}
-
-.framework-card:hover {
-  transform: translateY(-10px);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.framework-card i {
-  color: var(--primary-color);
-}
-
-.framework-card:hover i {
-  color: var(--secondary-color);
-}
-/* Animation de flottement */
-@keyframes float {
-  0% {
-    transform: translateY(0);
+  
+  section {
+    padding: 100px 0;
   }
-  50% {
+  
+  /* Alternating section backgrounds */
+section:nth-child(odd) {
+    background-color: var(--dark-bg-color);
+}
+
+section:nth-child(even) {
+    background-color: var(--light-bg-color);
+}
+
+/* Override specific section classes */
+.bg-light {
+    background-color: var(--light-bg-color) !important;
+}
+  
+.bg-gray {
+    background-color: var(--dark-bg-color) !important;
+}
+  
+  h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  #about {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 50px 0;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  #about img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--primary-color);
+  }
+    .skill-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 188, 212, 0.2);
+  }
+  
+  .skill-item i {
+    color: var(--primary-color);
+  }
+  
+  .skill-item:hover i {
+    color: var(--text-color);
+  }
+  
+  /* Animation de flottement */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styles pour l'image avec effet de néon bleu-cyan */
+  .profile-card img {
+    border: 5px solid var(--primary-color); /* Bordure bleu-cyan */
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+  }
+  
+  .project-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
     transform: translateY(-10px);
   }
-  100% {
-    transform: translateY(0);
+  
+  .project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
   }
+  
+  /* Styles pour les boutons "View My GitHub" et "Send Message" */
+  .btn-github,
+  .btn-send {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+    color: var(--secondary-color);
+  }
+  
+  .btn-github:hover,
+  .btn-send:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+  }
+  
+  #apis {
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
+    padding: 50px 0;
+  }
+  
+  #apis h2 {
+    color: var(--primary-color);
+  }
+  
+  .api-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid var(--primary-color);
+    height: 100%; /* Assure que les deux cartes ont la même hauteur */
+  }
+  
+  .api-item:hover {
+    transform: translateY(-10px);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .api-item i {
+    color: var(--primary-color);
+  }
+  
+  .api-item:hover i {
+    color: var(--secondary-color);
+  }
+    /* Styles spécifiques pour l'élément "Discord API" */
+  .api-discord:hover {
+    background-color: rgba(0, 188, 212, 0.2); /* Utilisez la couleur bleu-cyan pour l'overlay */
+    color: var(--text-color); /* Assurez-vous que le texte reste visible */
+  }
+  
+  .api-discord:hover i {
+    color: var(--text-color); /* Assurez-vous que les icônes restent visibles */
+  }
+  
+  /* Additional styling for OS proficiency section */
+#os-proficiency .os-item i {
+    color: var(--primary-color);
 }
 
-/* Styles pour la boîte avec effet de néon vert */
-.profile-card {
-  background-color: var(--background-color);
-  border: 5px solid #00ff00; /* Bordure verte */
-  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  animation: float 3s ease-in-out infinite;
+/* Footer styling */
+footer {
+    background-color: var(--dark-bg-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    border-top: 1px solid var(--primary-color);
+}
+  
+  footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: var(--accent-color);
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Ajoutez cette classe pour la carte du framework */
+  .framework-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--primary-color);
+  }
+    .framework-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 188, 212, 0.2);
+  }
+  
+  .framework-card i {
+    color: var(--primary-color);
+  }
+  
+  .framework-card:hover i {
+    color: var(--text-color);
+  }
+  /* Animation de flottement */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styles pour la boîte avec effet de néon bleu-cyan */
+  .profile-card {
+    background-color: var(--background-color);
+    border: 5px solid var(--primary-color); /* Bordure bleu-cyan */
+    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .profile-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  
+  .profile-card h3 {
+    color: var(--primary-color);
+  }
+  
+  .profile-card p {
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .profile-card .social-links a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .profile-card .social-links a:hover {
+    color: var(--button-hover-color);
+  }
+  
+  .progress-bar {
+    background-color: var(--primary-color);
 }
 
-.profile-card img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 15px;
+.social-links a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
-.profile-card h3 {
-  color: var(--primary-color);
+.social-links a:hover {
+    color: var(--button-hover-color);
 }
 
-.profile-card p {
-  color: var(--text-color);
-  margin-bottom: 10px;
+/* Update styling for API and OS items */
+.api-item, .os-item, .framework-card, .skill-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--primary-color);
+    height: 100%;
 }
 
-.profile-card .social-links a {
-  color: var(--primary-color);
-  margin: 0 10px;
-  transition: color 0.3s ease;
+.api-item:hover, .os-item:hover, .framework-card:hover, .skill-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 188, 212, 0.2);
 }
 
-.profile-card .social-links a:hover {
-  color: var(--accent-color);
+/* Ensure text remains legible on hover */
+.api-item:hover p, .os-item:hover p, .framework-card:hover p, .skill-item:hover p,
+.api-item:hover h4, .os-item:hover h4, .framework-card:hover h4, .skill-item:hover h4 {
+    color: var(--text-color);
+}
+
+.api-item:hover i, .os-item:hover i, .framework-card:hover i, .skill-item:hover i {
+    color: var(--text-color);
 }
 
